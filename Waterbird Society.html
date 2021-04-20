@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            // set bad login URL here:
+            var badLogin = "/index.aspx";
+
+            // set redirect URL here:
+            var redirect = "https://bioone.org/journals/waterbirds";
+
+            // set UserName here:
+            var username = "waterbird";
+
+            // set password here:
+            var password = "waterbird";
+
+            // main logic which should not be modified
+            $("#badLogin").val(badLogin);
+            $("#redirect").val(redirect);
+            $("#username").val(username);
+            $("#password").val(password);
+            $("#login").submit();
+        });
+    </script>
+</head>
+<body>
+    <form id="login" method="post" action="https://www.bioone.org/InstitutionEmbeddedAutologin.ashx">
+        <input type="hidden" id="badLogin" name="badLogin">
+        <input type="hidden" id="redirect" name="redirect">
+        <input type="hidden" id="username" name="UserName">
+        <input type="hidden" id="password" name="Password">
+        <input type="hidden" name="submit1" value="Login">
+    </form>
+</body>
+</html>
